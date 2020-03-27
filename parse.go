@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ericchiang/pup/Godeps/_workspace/src/golang.org/x/net/html"
-	"github.com/ericchiang/pup/Godeps/_workspace/src/golang.org/x/net/html/charset"
-	"github.com/ericchiang/pup/Godeps/_workspace/src/golang.org/x/text/transform"
+	"golang.org/x/net/html"
+	"golang.org/x/net/html/charset"
+	"golang.org/x/text/transform"
 )
 
 var (
@@ -146,7 +146,7 @@ func ParseCommands(cmdString string) ([]string, error) {
 			}
 			return cmds, nil
 		}
-		// evalute a rune
+		// evaluate a rune
 		c := cmdString[next]
 		switch c {
 		case ' ':
